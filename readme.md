@@ -1,10 +1,15 @@
-Facebook PHP SDK (v.3.0.0)
+Facebook PHP SDK (v.3.0.0) + CakePHP HttpSocket
 ==========================
 
 The [Facebook Platform](http://developers.facebook.com/) is
 a set of APIs that make your application more social. Read more about
 [integrating Facebook with your web site](http://developers.facebook.com/docs/guides/web)
 on the Facebook developer site.
+
+The original Facebook SDK requires cURL. When using CakePHP there is no need for curl to perform basic http calls. The cURL calls have been replaced with [Http::Socket](http://book.cakephp.org/view/1517/HttpSocket)
+	Requires CakePHP 1.3
+	
+NOTE: This may be done by someone else. I was unable to find this and after repeatedly using this bit of code I figured it would be good to publish.
 
 This repository contains the open source PHP SDK that allows you to utilize the
 above on your website. Except as otherwise noted, the Facebook PHP SDK
