@@ -6,7 +6,7 @@ a set of APIs that make your application more social. Read more about
 [integrating Facebook with your web site](http://developers.facebook.com/docs/guides/web)
 on the Facebook developer site.
 
-The original Facebook SDK requires cURL. When using CakePHP there is no need for curl to perform basic http calls. The cURL calls have been replaced with [Http::Socket](http://book.cakephp.org/view/1517/HttpSocket)
+The original Facebook SDK requires cURL. When using CakePHP there is no need for curl to perform basic http calls. The cURL calls have been replaced with [HttpSocket](http://book.cakephp.org/view/1517/HttpSocket)
 	Requires CakePHP 1.3
 	
 NOTE: This may be done by someone else. I was unable to find this and after repeatedly using this bit of code I figured it would be good to publish.
@@ -17,7 +17,32 @@ is licensed under the Apache Licence, Version 2.0
 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
-Usage
+CakePHP Usage
+-----
+
+Copy the files from
+
+    src/
+    src/base_facebook.php
+    src/facebook.php
+    src/facebook_cakephp.php
+
+to
+
+    app/vendors/facebook-cakephp
+
+Import them into your controller as needed.
+
+    App::import('Vendor','facebook-cakephp/facebook_cakephp');
+	
+	// Create our Application instance (replace this with your appId and secret).
+	$facebook = new CakeFacebook(array(
+	  'appId'  => '################',
+	  'secret' => '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$',
+	));
+
+
+General SDK Usage
 -----
 
 The [examples][examples] are a good place to start. The minimal you'll need to
