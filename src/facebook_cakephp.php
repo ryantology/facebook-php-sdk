@@ -75,7 +75,7 @@ class CakeFacebook extends BaseFacebook {
 		}
 
 		$session_var_name = $this->constructSessionVariableName($key);
-		return isset($this->Session->read($session_var_name)) ?
+		return $this->Session->read($session_var_name) ?
 			$this->Session->read($session_var_name) : $default;
 	}
 
