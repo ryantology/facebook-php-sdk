@@ -1,5 +1,6 @@
 Facebook PHP SDK (v.3.1.1)
   + CakePHP HttpSocket
+==========================
 
 The [Facebook Platform](http://developers.facebook.com/) is
 a set of APIs that make your app more social
